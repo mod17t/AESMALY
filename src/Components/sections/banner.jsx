@@ -3,7 +3,7 @@ const Banner = () => {
   return (
     <section
       className="p-16 mx-auto bg-cover bg-center flex items-center rounded-2xl my-3 
-      bg-[linear-gradient(to_right,#042A1F,transparent_90%),url('/hero-bg.jpg')]"
+      bg-[linear-gradient(to_right,#042A1F,transparent_90%),url('/Hero/hero-bg.jpg')]"
     >
       <div className="container px-8 text-white md:max-w-2xl flex flex-col items-start ">
         <p className="uppercase tracking-widest text-sm mb-2">
