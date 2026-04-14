@@ -1,4 +1,3 @@
-import Button from "../ui/button";
 
 const Navbar = () => {
   const links = [
@@ -11,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="top-0 w-full z-50 transition all duration-300 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl  px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="" className="flex items-center space-x-3  shrink-0">
             <img
@@ -29,7 +28,7 @@ const Navbar = () => {
               </span>
             </div>
           </a>
-          <div className="flex items-center space-x-5 text-gray-700 group font-semibold hover:text-gray-900 transition duration-300">
+          <div className="flex items-center space-x-8 text-gray-700 group font-semibold hover:text-gray-900 transition duration-300">
             {links.map((link) => (
               <a
                 key={link.label}
@@ -39,7 +38,9 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button/>
+            <button className="px-6 py-2 text-white bg-green-800 rounded-full font-medium hover:bg-green-900 transition-colors cursor-pointer">
+              Adhérer
+            </button>
           </div>
         </div>
       </div>
