@@ -1,0 +1,135 @@
+import { Mail, MapPin, Phone } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-green-950 text-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-10 py-12">
+        {/* Colonne 1 — Logo */}
+        <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-8 md:pb-0 md:pr-8">
+          <div className="flex items-center md:items-start gap-3">
+            <img
+              src="/Logo.png"
+              alt="AESMALY Logo"
+              className="w-14 h-14 object-contain"
+            />
+            <div>
+              <h3 className="text-lg font-bold">AESMALY</h3>
+              <p className="text-xs text-gray-100">
+                Association des Étudiants et Jeunes Actifs Malien de Lyon
+              </p>
+            </div>
+          </div>
+          <p className="text-sm font-light text-center md:text-left">
+            Une communauté soudée pour l'intégration, la réussite et
+            l'épanouissement des étudiants et jeunes maliens à Lyon.
+          </p>
+          <div className="flex gap-2">
+            <a
+              href="#"
+              className="p-2 rounded-full transition hover:scale-105 duration-300"
+            >
+              <img src="/instagram.png" alt="Instagram" className="w-7" />
+            </a>
+            <a
+              href="#"
+              className="p-2 rounded-full transition hover:scale-105 duration-300"
+            >
+              <img src="/linkedin.png" alt="LinkedIn" className="w-7" />
+            </a>
+            <a
+              href="#"
+              className="p-2 rounded-full transition hover:scale-105 duration-300"
+            >
+              <img src="/email.png" alt="Email" className="w-7" />
+            </a>
+          </div>
+        </div>
+
+        {/* Colonne 2 — Liens rapides */}
+        <div className="flex flex-col gap-3 items-center md:items-start border-b md:border-b-0 lg:border-r border-white/80 pb-8 md:pb-0 md:px-8">
+          <div className="w-fit">
+            <h3 className="text-lg font-bold">Liens Rapides</h3>
+            <div className="h-0.5 w-full bg-amber-500 mt-1 mb-3" />
+          </div>
+          {[
+            "Accueil",
+            "Qui sommes-nous ?",
+            "Nos activités",
+            "Adhésion",
+            "Contact",
+          ].map((link) => (
+            <a
+              key={link}
+              href="#"
+              className="text-sm text-gray-300 hover:text-white flex items-center gap-2 transition"
+            >
+              <span className="text-yellow-500">›</span> {link}
+            </a>
+          ))}
+        </div>
+
+        {/* Colonne 3 — Coordonnées */}
+        <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-8 md:pb-0 md:px-8">
+          <div className="w-fit">
+            <h3 className="font-bold text-lg">Coordonnées</h3>
+            <div className="h-0.5 w-full bg-yellow-500 mt-1 mb-3" />
+          </div>
+          <div className="flex items-start gap-3 text-sm text-gray-300">
+            <MapPin size={18} className="shrink-0 mt-0.5 text-white" />
+            <p>
+              25 rue Jaboulay
+              <br />
+              69007 Lyon, France
+            </p>
+          </div>
+          <div className="flex items-center gap-3 text-sm text-gray-300">
+            <Phone size={18} className="shrink-0 text-white" />
+            <p>+33 6 00 00 00 00</p>
+          </div>
+          <div className="flex items-center gap-3 text-sm text-gray-300">
+            <Mail size={18} className="shrink-0 text-white" />
+            <p>contact@aesmaly-lyon.fr</p>
+          </div>
+        </div>
+
+        {/* Colonne 4 — Mentions légales */}
+        <div
+          className="flex flex-col gap-3 items-center md:items-start md:pl-8"
+        >
+          <div className="w-fit">
+            <h3 className="font-bold text-lg">Mentions légales</h3>
+            <div className="h-0.5 w-full bg-yellow-500 mt-1 mb-3" />
+          </div>
+          {[
+            "Conditions d'utilisation",
+            "Politique de confidentialité",
+            "Mentions légales",
+          ].map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="text-sm text-gray-300 hover:text-white transition"
+            >
+              {item}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Barre tricolore + copyright */}
+      <div className="relative h-6">
+        <div className="absolute inset-0 flex">
+          <div className="w-1/3 bg-green-600" />
+          <div className="w-1/3 bg-yellow-500" />
+          <div className="w-1/3 bg-red-600" />
+        </div>
+        <p className="absolute inset-0 flex items-center justify-center text-xs text-white font-medium text-center px-4">
+          © 2025 AESMALY – Association des Étudiants et Jeunes Maliens de Lyon •
+          Tous droits réservés
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

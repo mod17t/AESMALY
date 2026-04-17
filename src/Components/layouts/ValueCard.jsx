@@ -3,7 +3,7 @@ const ValueCard = ({ title, description, image, icon, colors }) => {
     <div
       className={`flex flex-col w-full h-96 rounded-2xl overflow-hidden shadow-lg bg-white border-b-7 ${colors.border}`}
     >
-      <div className={`h-38 w-full`}>
+      <div className={`h-38  w-full`}>
         <img src={image} alt={title} className="object-cover w-full h-full" />
       </div>
 

@@ -29,7 +29,7 @@ const OurValue = () => {
     ];
 
   return (
-    <section className=" bg-[#F8F4EF] pt-6 pb-15 mb-12">
+    <section className=" bg-[#F8F4EF] pt-6 pb-15">
       <h2 className="text-3xl text-green-800 font-bold text-center mb-5">Nos Valeurs</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto px-6">
         {values.map((value)=> (
