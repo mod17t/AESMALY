@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-green-950 text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-10 py-12">
-        {/* Colonne 1 — Logo */}
+        
         <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-8 md:pb-0 md:pr-8">
           <div className="flex items-center md:items-start gap-3">
             <img
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Colonne 2 — Liens rapides */}
+        
         <div className="flex flex-col gap-3 items-center md:items-start border-b md:border-b-0 lg:border-r border-white/80 pb-8 md:pb-0 md:px-8">
           <div className="w-fit">
             <h3 className="text-lg font-bold">Liens Rapides</h3>
@@ -68,7 +68,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Colonne 3 — Coordonnées */}
+       
         <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-8 md:pb-0 md:px-8">
           <div className="w-fit">
             <h3 className="font-bold text-lg">Coordonnées</h3>
@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Colonne 4 — Mentions légales */}
+       
         <div
           className="flex flex-col gap-3 items-center md:items-start md:pl-8"
         >
