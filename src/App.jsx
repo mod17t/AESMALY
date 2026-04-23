@@ -3,9 +3,9 @@ import Navbar from "./Components/layouts/Navbar";
 import Accueil from "./Pages/Accueil";
 import About from "./Pages/About";
 import Activities from "./Pages/Activities";
-import Adhesion from "./Pages/Adehsion";
+import Adhesion from "./Pages/Adhesion";
 import Contact from "./Pages/Contact";
-import Footer from "./Components/sections/Footer";
+import Footer from "./Components/layouts/Footer";
 
 const App = () => {
   return (

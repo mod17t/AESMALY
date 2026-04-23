@@ -1,4 +1,4 @@
-import ValueCard from "../layouts/ValueCard"
+import ValueCard from "../../ui/ValueCard"
 
 const OurValue = () => {
     const values = [
