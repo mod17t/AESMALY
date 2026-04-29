@@ -116,8 +116,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Barre tricolore + copyright */}
-      <div className="relative h-6">
+      <div className="relative h-8">
         <div className="absolute inset-0 flex">
           <div className="w-1/3 bg-green-600" />
           <div className="w-1/3 bg-yellow-500" />

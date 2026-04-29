@@ -2,7 +2,7 @@ import { Handshake } from "lucide-react";
 
 const WhyJoin = () => {
   return (
-    <section className="bg-linear-to-b from-white via-[#FFFBF5] to-[#FFFBF5] py-15 px-6">
+    <section className="py-8 px-7">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-3 bg-green-800 text-white w-fit px-5 py-2 rounded-tl-full rounded-r-full mb-6">
           <Handshake className="w-5 h-5" />
@@ -24,7 +24,7 @@ const WhyJoin = () => {
           leur <strong>épanouissement.</strong>
         </p>
 
-        <div className="relative bg-[#F4F1EA] rounded-lg px-10 py-8 md:px-14 md:py-10 mt-8">
+        <div className="relative bg-green-600/5 rounded-lg px-10 py-8 md:px-14 md:py-10 mt-8">
           <span className="absolute top-2 left-4 md:top-3 md:left-5 text-5xl md:text-6xl text-green-800 font-serif font-bold leading-none select-none">
             &ldquo;
           </span>

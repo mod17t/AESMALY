@@ -5,7 +5,7 @@ import Mission from "../Components/sections/Accueil/Mission";
 const Accueil = () => {
   return (
     <main>
-      <div className="mx-[2%]">
+      <div >
         <Banner />
       </div>
       <OurValue />
