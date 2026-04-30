@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { label: "Accueil", href: "/" },
-    { label: "Qui sommes-nous ?", href: "/about" },
     { label: "Nos activités", href: "/activities" },
     { label: "Adhésion", href: "/adhesion" },
     { label: "Contact", href: "/contact" },
@@ -55,9 +54,11 @@ const Navbar = () => {
                 )}
               </NavLink>
             ))}
-            <button className="px-6 py-2 text-white bg-green-800 rounded-full font-medium hover:bg-green-900 transition-colors cursor-pointer">
+            <Link
+             to={"/adhesion"}
+             className="px-6 py-2 text-white bg-green-800 rounded-full font-medium hover:bg-green-900 transition-colors cursor-pointer">
               Adhérer
-            </button>
+            </Link>
           </div>
 
           <button

@@ -1,10 +1,9 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-
+import { href, Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-green-950 text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-10 py-12">
-        
         <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-8 md:pb-0 md:pr-8">
           <div className="flex items-center md:items-start gap-3">
             <img
@@ -24,51 +23,48 @@ const Footer = () => {
             l'épanouissement des étudiants et jeunes maliens à Lyon.
           </p>
           <div className="flex gap-2">
-            <a
-              href="#"
+            <Link
+              to=""
               className="p-2 rounded-full transition hover:scale-105 duration-300"
             >
               <img src="/instagram.png" alt="Instagram" className="w-7" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="p-2 rounded-full transition hover:scale-105 duration-300"
             >
               <img src="/linkedin.png" alt="LinkedIn" className="w-7" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="p-2 rounded-full transition hover:scale-105 duration-300"
             >
               <img src="/email.png" alt="Email" className="w-7" />
-            </a>
+            </Link>
           </div>
         </div>
 
-        
         <div className="flex flex-col gap-3 items-center md:items-start border-b md:border-b-0 lg:border-r border-white/80 pb-8 md:pb-0 md:px-8">
           <div className="w-fit">
             <h3 className="text-lg font-bold">Liens Rapides</h3>
             <div className="h-0.5 w-full bg-amber-500 mt-1 mb-3" />
           </div>
           {[
-            "Accueil",
-            "Qui sommes-nous ?",
-            "Nos activités",
-            "Adhésion",
-            "Contact",
+            { name: "Accueil", lien: "/" },
+            { name: "Nos activités", lien: "/activities" },
+            { name: "Adhésion", lien: "/adhesion" },
+            { name: "contact", lien: "/contact" },
           ].map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.name}
+              href={link.lien}
               className="text-sm text-gray-300 hover:text-white flex items-center gap-2 transition"
             >
-              <span className="text-yellow-500">›</span> {link}
+              <span className="text-yellow-500">›</span> {link.name}
             </a>
           ))}
         </div>
 
-       
         <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-8 md:pb-0 md:px-8">
           <div className="w-fit">
             <h3 className="font-bold text-lg">Coordonnées</h3>
@@ -83,36 +79,22 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center gap-3 text-sm text-gray-300">
-            <Phone size={18} className="shrink-0 text-white" />
-            <p>+33 6 00 00 00 00</p>
-          </div>
-          <div className="flex items-center gap-3 text-sm text-gray-300">
             <Mail size={18} className="shrink-0 text-white" />
-            <p>contact@aesmaly-lyon.fr</p>
+            <p> aesmalyon@gmail.com</p>
           </div>
         </div>
 
-       
-        <div
-          className="flex flex-col gap-3 items-center md:items-start md:pl-8"
-        >
+        <div className="flex flex-col gap-3 items-center md:items-start md:pl-8">
           <div className="w-fit">
             <h3 className="font-bold text-lg">Mentions légales</h3>
             <div className="h-0.5 w-full bg-yellow-500 mt-1 mb-3" />
           </div>
-          {[
-            "Conditions d'utilisation",
-            "Politique de confidentialité",
-            "Mentions légales",
-          ].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-sm text-gray-300 hover:text-white transition"
-            >
-              {item}
-            </a>
-          ))}
+          <a
+            href="/mentions-legales"
+            className="text-sm text-gray-300 hover:text-white transition"
+          >
+            Politique de confidentialité
+          </a>
         </div>
       </div>
 

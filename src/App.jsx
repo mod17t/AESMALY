@@ -6,6 +6,7 @@ import Activities from "./Pages/Activities";
 import Adhesion from "./Pages/Adhesion";
 import Contact from "./Pages/Contact";
 import Footer from "./Components/layouts/Footer";
+import Mention from "./Pages/Mention";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/activities" element={<Activities />} />
         <Route path="/adhesion" element={<Adhesion />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/mentions-legales" element={<Mention />} />
       </Routes>
       <Footer />
     </>

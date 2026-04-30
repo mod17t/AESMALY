@@ -1,20 +1,16 @@
 const AdhesionHero = () => {
   return (
-    <section className="relative overflow-hidden mt-3 bg-[#F9EFE5]">
-     
+    <section className="relative overflow-hidden mt-3 ">
       <div className="absolute inset-0">
         <img
           src="/Adhesion-img/communaute.jpg"
           alt="Membres de la communauté partageant un repas"
           className="w-full h-full object-cover object-center md:object-right"
         />
-
-        <div className="md:hidden absolute inset-0 bg-linear-to-b from-[#F9EFE5] from-0% via-[#F9EFE5]/70 via-40% to-transparent to-85%" />
-
-        <div className="hidden md:block absolute inset-0 bg-linear-to-r from-[#F9EFE5] from-0% via-[#F9EFE5]/80 via-40% to-transparent to-65%" />
+        <div className="md:hidden absolute inset-0 bg-linear-to-b from-[#F9EFE5] from-0% via-[#F9EFE5]/75 via-45% to-transparent to-90%" />
+        <div className="hidden md:block absolute inset-0 bg-linear-to-r from-[#F9EFE5] from-0% via-[#F9EFE5]/85 via-40% to-transparent to-65%" />
       </div>
 
-      
       <div className="relative z-10 flex items-start md:items-center min-h-70 sm:min-h-80 md:min-h-90 lg:min-h-100">
         <div className="w-full md:w-1/2 px-5 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-14">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-3 md:mb-4">
@@ -27,7 +23,6 @@ const AdhesionHero = () => {
         </div>
       </div>
 
-      
       <div className="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
         <svg
           viewBox="0 0 1440 100"
