@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { href, Link } from "react-router-dom";
+import { href, Link, NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-green-950 text-white">
@@ -55,13 +55,13 @@ const Footer = () => {
             { name: "Adhésion", lien: "/adhesion" },
             { name: "contact", lien: "/contact" },
           ].map((link) => (
-            <a
+            <NavLink
               key={link.name}
-              href={link.lien}
+              to={link.lien}
               className="text-sm text-gray-300 hover:text-white flex items-center gap-2 transition"
             >
               <span className="text-yellow-500">›</span> {link.name}
-            </a>
+            </NavLink>
           ))}
         </div>
 
