@@ -39,7 +39,7 @@ const HowToJoin = () => {
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-gray-600">
-                Paiement sécurisé : Carte Bancaire • PayPal • HelloAsso
+                Paiement sécurisé : Carte Bancaire • PayPal
               </p>
             </div>
           </div>

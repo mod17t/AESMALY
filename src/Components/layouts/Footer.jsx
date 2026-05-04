@@ -1,6 +1,10 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { href, Link, NavLink } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 const Footer = () => {
+  const gotoTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   return (
     <footer className="bg-green-950 text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-10 py-12">
@@ -30,13 +34,13 @@ const Footer = () => {
               <img src="/instagram.png" alt="Instagram" className="w-7" />
             </Link>
             <Link
-              href="#"
+              to="#"
               className="p-2 rounded-full transition hover:scale-105 duration-300"
             >
               <img src="/linkedin.png" alt="LinkedIn" className="w-7" />
             </Link>
             <Link
-              href="#"
+              to="#"
               className="p-2 rounded-full transition hover:scale-105 duration-300"
             >
               <img src="/email.png" alt="Email" className="w-7" />
@@ -55,13 +59,13 @@ const Footer = () => {
             { name: "Adhésion", lien: "/adhesion" },
             { name: "contact", lien: "/contact" },
           ].map((link) => (
-            <NavLink
+            <Link
               key={link.name}
               to={link.lien}
               className="text-sm text-gray-300 hover:text-white flex items-center gap-2 transition"
             >
               <span className="text-yellow-500">›</span> {link.name}
-            </NavLink>
+            </Link>
           ))}
         </div>
 
@@ -89,22 +93,22 @@ const Footer = () => {
             <h3 className="font-bold text-lg">Mentions légales</h3>
             <div className="h-0.5 w-full bg-yellow-500 mt-1 mb-3" />
           </div>
-          <a
-            href="/mentions-legales"
+          <Link
+            to="/mentions-legales"
             className="text-sm text-gray-300 hover:text-white transition"
           >
             Politique de confidentialité
-          </a>
+          </Link>
         </div>
       </div>
 
-      <div className="relative h-8">
+      <div className="relative ">
         <div className="absolute inset-0 flex">
-          <div className="w-1/3 bg-green-600" />
-          <div className="w-1/3 bg-yellow-500" />
-          <div className="w-1/3 bg-red-600" />
+          <div className="flex-1 bg-green-700" />
+          <div className="flex-1 bg-yellow-600" />
+          <div className="flex-1 bg-red-700" />
         </div>
-        <p className="absolute inset-0 flex items-center justify-center text-xs text-white font-medium text-center px-4">
+        <p className="relative flex items-center justify-center text-xs text-white font-medium text-center px-4 py-2 min-h-8">
           © 2025 AESMALY – Association des Étudiants et Jeunes Maliens de Lyon •
           Tous droits réservés
         </p>
