@@ -2,7 +2,7 @@ import { Handshake } from "lucide-react";
 
 const WhyJoin = () => {
   return (
-    <section className="py-8 px-7">
+    <section className="py-4 md:py-6 px-5 md:px-7 bg-linear-to-b from-white from-20% to-green-50/50">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-3 bg-green-800 text-white w-fit px-5 py-2 rounded-tl-full rounded-r-full mb-6">
           <Handshake className="w-5 h-5" />

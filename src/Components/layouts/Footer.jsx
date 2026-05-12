@@ -2,13 +2,10 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 const Footer = () => {
-  const gotoTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
   return (
     <footer className="bg-green-950 text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-10 py-12">
-        <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-8 md:pb-0 md:pr-8">
+        <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-6 md:pb-0 md:pr-8">
           <div className="flex items-center md:items-start gap-3">
             <img
               src="/Logo.png"
@@ -27,28 +24,28 @@ const Footer = () => {
             l'épanouissement des étudiants et jeunes maliens à Lyon.
           </p>
           <div className="flex gap-2">
-            <Link
-              to=""
+            <a
+              href="https://www.instagram.com/aesmaly?igsh=MWYzbWFtaWszaW12NQ%3D%3D&utm_source=qr"
               className="p-2 rounded-full transition hover:scale-105 duration-300"
             >
               <img src="/instagram.png" alt="Instagram" className="w-7" />
-            </Link>
-            <Link
-              to="#"
+            </a>
+            <a
+              href="https://www.linkedin.com/company/aesmaly/"
               className="p-2 rounded-full transition hover:scale-105 duration-300"
             >
               <img src="/linkedin.png" alt="LinkedIn" className="w-7" />
-            </Link>
-            <Link
-              to="#"
+            </a>
+            <a
+              href="https://www.facebook.com/share/14TxZRGqpNU/?mibextid=wwXIfr"
               className="p-2 rounded-full transition hover:scale-105 duration-300"
             >
-              <img src="/email.png" alt="Email" className="w-7" />
-            </Link>
+              <img src="/facebook.png" alt="Email" className="w-7" />
+            </a>
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 items-center md:items-start border-b md:border-b-0 lg:border-r border-white/80 pb-8 md:pb-0 md:px-8">
+        <div className="flex flex-col gap-3 items-center md:items-start border-b md:border-b-0 lg:border-r border-white/80 pb-6 md:pb-0 md:px-8">
           <div className="w-fit">
             <h3 className="text-lg font-bold">Liens Rapides</h3>
             <div className="h-0.5 w-full bg-amber-500 mt-1 mb-3" />
@@ -69,7 +66,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-8 md:pb-0 md:px-8">
+        <div className="flex flex-col gap-4 items-center md:items-start border-b md:border-b-0 md:border-r border-white/80 pb-6 md:pb-0 md:px-8">
           <div className="w-fit">
             <h3 className="font-bold text-lg">Coordonnées</h3>
             <div className="h-0.5 w-full bg-yellow-500 mt-1 mb-3" />

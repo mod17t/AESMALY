@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="top-0 w-full z-50 transition all duration-300 ">
       <div className="max-w-8xl  px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="" className="flex items-center space-x-3  shrink-0">
+          <a href="/" className="flex items-center space-x-3  shrink-0">
             <img
               src="/Logo.png"
               alt="Logo AESMALY"

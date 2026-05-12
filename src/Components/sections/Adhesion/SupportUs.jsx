@@ -18,7 +18,7 @@ const SupportUs = () => {
               Vous souhaitez{" "}
               <strong className="text-red-700">contribuer</strong> à nos actions
               et <strong className="text-red-700">soutenir</strong> la jeunesse
-              malienne de Lyon ? <br />
+              malienne de Lyon ? Faite un don ! <br />
               <br />
               Chaque contribution compte. Merci de votre{" "}
               <strong className="text-red-700">soutien</strong> !

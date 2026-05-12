@@ -1,14 +1,14 @@
 const AdhesionHero = () => {
   return (
-    <section className="relative overflow-hidden mt-3 ">
+    <section className="relative bg-[#F9EFE5] mt-2">
       <div className="absolute inset-0">
         <img
-          src="/Adhesion-img/communaute.jpg"
+          src="/Adhesion-img/header.jpg"
           alt="Membres de la communauté partageant un repas"
           className="w-full h-full object-cover object-center md:object-right"
         />
-        <div className="md:hidden absolute inset-0 bg-linear-to-b from-[#F9EFE5] from-0% via-[#F9EFE5]/75 via-45% to-transparent to-90%" />
-        <div className="hidden md:block absolute inset-0 bg-linear-to-r from-[#F9EFE5] from-0% via-[#F9EFE5]/85 via-40% to-transparent to-65%" />
+        <div className="md:hidden absolute inset-0 bg-linear-to-b from-[#F9EFE5] from-0% via-[#F9EFE5]/40 via-40% to-transparent to-75%" />
+        <div className="hidden md:block absolute inset-0 bg-linear-to-r from-[#F9EFE5] from-0% via-[#F9EFE5]/80 via-15% to-transparent to-65%" />
       </div>
 
       <div className="relative z-10 flex items-start md:items-center min-h-70 sm:min-h-80 md:min-h-90 lg:min-h-100">
