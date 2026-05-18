@@ -1,8 +1,10 @@
-import React from 'react'
+import ActivitiesHero from "../Components/sections/Activities/ActivitiesHero";
 
 const Activities = () => {
   return (
-    <div>Activities</div>
+    <div>
+      <ActivitiesHero />
+    </div>
   )
 }
 
