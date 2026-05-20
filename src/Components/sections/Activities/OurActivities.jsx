@@ -1,8 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ActivityCard from "../../ui/ActivityCard";
 
 const OurActivities = () => {
-  const navigate = useNavigate();
   const cards = [
     {
       title: "Cocktail d'ouverture",
@@ -142,12 +141,12 @@ const OurActivities = () => {
           Rejoignez nous pour plus d'activités et de moments de partage autour
           de la culture malienne à Lyon !
         </p>
-        <a
-          href="/adhesion"
+        <Link
+          to="/adhesion"
           className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 transition-colors"
         >
           En savoir plus
-        </a>
+        </Link>
       </div>
     </>
   );
