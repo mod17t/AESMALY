@@ -7,7 +7,7 @@ const ActivitiesHero = () => {
         bg-[linear-gradient(to_right,#062E24_40%,transparent_75%),url(/Activities/header.png)]
         bg-cover bg-center bg-no-repeat
         flex items-center
-        min-h-50 sm:min-h-70 md:min-h-90
+        min-h-65 sm:min-h-75 md:min-h-90
         px-6 py-10 sm:px-10 sm:py-14 md:px-16 md:py-16
       "
       >
@@ -15,7 +15,7 @@ const ActivitiesHero = () => {
           <h1 className="text-xl sm:text-3xl md:text-4xl font-bold leading-tight">
             Nos activités
           </h1>
-          <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
+          <p className="text-gray-300 text-sm md:text-base lg:text-lg leading-relaxed">
             Des événements pour rassembler, valoriser et partager la culture
             malienne à Lyon.
           </p>
@@ -34,24 +34,6 @@ const ActivitiesHero = () => {
           </svg>
         </div>
       </header>
-      <div className="flex flex-col items-center justify-center gap-4 text-center mx-10 px-6 sm:px-10 md:px-16 py-4 md:py-8">
-        <div className="flex flex-col items-center gap-2">
-          <h2 className="text-green-800 text-2xl md:text-3xl font-bold text-center">
-            Les évènements phares (annuels)
-          </h2>
-          <div className="flex h-0.75 w-24 rounded-full">
-            <div className="bg-green-700 flex-1"></div>
-            <div className="bg-yellow-400 flex-1"></div>
-            <div className="bg-red-600 flex-1"></div>
-          </div>
-        </div>
-        <p>
-          Chaque année, l’AESMALY organise des événements structurants qui
-          rythment la vie de l’association. Ces rendez-vous incontournables
-          traduisent nos valeurs de partage, de transmission et de mise en
-          lumière de la culture.
-        </p>
-      </div>
     </>
   );
 };
