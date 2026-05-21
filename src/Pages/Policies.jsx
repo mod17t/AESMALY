@@ -1,4 +1,4 @@
-const Mention = () => {
+const Policies = () => {
   return (
     <div className="min-h-screen bg-stone-50">
       <header className="bg-white border-b border-stone-200">
@@ -15,7 +15,7 @@ const Mention = () => {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-16 md:py-24">
-        <article className="space-y-14">
+        <article className="space-y-8">
           <section>
             <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-6 tracking-tight">
               Introduction
@@ -31,7 +31,7 @@ const Mention = () => {
             </p>
           </section>
 
-          <section className="pt-14 border-t border-stone-200">
+          <section className="pt-10 border-t border-stone-200">
             <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-6 tracking-tight">
               Responsable du traitement des données
             </h2>
@@ -44,7 +44,7 @@ const Mention = () => {
             </p>
           </section>
 
-          <section className="pt-14 border-t border-stone-200">
+          <section className="pt-10 border-t border-stone-200">
             <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-6 tracking-tight">
               Données collectées
             </h2>
@@ -56,7 +56,7 @@ const Mention = () => {
             </p>
           </section>
 
-          <section className="pt-14 border-t border-stone-200">
+          <section className="pt-10 border-t border-stone-200">
             <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-6 tracking-tight">
               4. Finalité de la collecte des données
             </h2>
@@ -69,7 +69,7 @@ const Mention = () => {
             </p>
           </section>
 
-          <section className="pt-14 border-t border-stone-200">
+          <section className="pt-10 border-t border-stone-200">
             <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-6 tracking-tight">
               Durée de conservation des données
             </h2>
@@ -80,7 +80,7 @@ const Mention = () => {
             </p>
           </section>
 
-          <section className="pt-14 border-t border-stone-200">
+          <section className="pt-10 border-t border-stone-200">
             <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-6 tracking-tight">
               Destinataires des données
             </h2>
@@ -91,7 +91,7 @@ const Mention = () => {
             </p>
           </section>
 
-          <section className="pt-14 border-t border-stone-200">
+          <section className="pt-10 border-t border-stone-200">
             <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-6 tracking-tight">
               Liens vers des services externes (HelloAsso)
             </h2>
@@ -105,7 +105,7 @@ const Mention = () => {
             </p>
           </section>
 
-          <section className="pt-14 border-t border-stone-200">
+          <section className="pt-10 border-t border-stone-200">
             <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-6 tracking-tight">
               Sécurité des données
             </h2>
@@ -161,4 +161,4 @@ const Mention = () => {
   );
 };
 
-export default Mention;
+export default Policies;

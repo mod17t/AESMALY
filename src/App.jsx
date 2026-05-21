@@ -6,7 +6,8 @@ import Activities from "./Pages/Activities";
 import Adhesion from "./Pages/Adhesion";
 import Contact from "./Pages/Contact";
 import Footer from "./Components/layouts/Footer";
-import Mention from "./Pages/Mention";
+import Policies from "./Pages/Policies";
+import Mentions from "./Pages/Mentions";
 import ScrollToTop from "./Components/layouts/ScrollToTop";
 
 const App = () => {
@@ -20,7 +21,8 @@ const App = () => {
         <Route path="/activities" element={<Activities />} />
         <Route path="/adhesion" element={<Adhesion />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/mentions-legales" element={<Mention />} />
+        <Route path="/policies" element={<Policies />} />
+        <Route path="/Mentions-legales" element={<Mentions />} />
       </Routes>
       <Footer />
     </>

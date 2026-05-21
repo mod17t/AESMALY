@@ -102,7 +102,13 @@ const Footer = () => {
             <div className="h-0.5 w-full bg-yellow-500 mt-1 mb-3" />
           </div>
           <Link
-            to="/mentions-legales"
+            to="/Mentions-legales"
+            className="text-sm text-gray-300 hover:text-white transition"
+          >
+            Mentions légales
+          </Link>
+          <Link
+            to="/policies"
             className="text-sm text-gray-300 hover:text-white transition"
           >
             Politique de confidentialité
