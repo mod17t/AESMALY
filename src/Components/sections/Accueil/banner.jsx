@@ -18,7 +18,7 @@ const Banner = () => {
       <section
         className="
         mx-[2%] bg-cover bg-right md:bg-center flex items-center rounded-2xl mt-3 mb-3
-        min-h-75 sm:min-h-96 md:min-h-130
+        min-h-80 sm:min-h-96 md:min-h-130
         px-6 py-12 sm:px-10 sm:py-16 md:px-16
         bg-[linear-gradient(to_right,#042A1F,transparent_60%),url('/Hero/hero-bg.jpg')]
       "

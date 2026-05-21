@@ -7,11 +7,13 @@ import Adhesion from "./Pages/Adhesion";
 import Contact from "./Pages/Contact";
 import Footer from "./Components/layouts/Footer";
 import Mention from "./Pages/Mention";
+import ScrollToTop from "./Components/layouts/ScrollToTop";
 
 const App = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/about" element={<About />} />
