@@ -48,7 +48,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center md:items-start border-b md:border-b-0 lg:border-r border-white/80 pb-6 md:pb-0 md:px-8">
           <div className="w-fit">
             <h3 className="text-lg font-bold">Liens Rapides</h3>
-            <div className="h-0.5 w-full bg-amber-500 mt-1 mb-3" />
+            <div className="h-0.5 w-full bg-yellow-500 mt-1 mb-3" />
           </div>
           {[
             { name: "Accueil", lien: "/" },
@@ -73,15 +73,26 @@ const Footer = () => {
           </div>
           <div className="flex items-start gap-3 text-sm text-gray-300">
             <MapPin size={18} className="shrink-0 mt-0.5 text-white" />
-            <p>
+            <a
+              href="https://maps.app.goo.gl/eHQrurjN4oFck7MF6"
+              target="_blank"
+              className="hover:text-white transition"
+            >
               25 rue Jaboulay
               <br />
               69007 Lyon, France
-            </p>
+            </a>
           </div>
           <div className="flex items-center gap-3 text-sm text-gray-300">
             <Mail size={18} className="shrink-0 text-white" />
-            <p> aesmalyon@gmail.com</p>
+            <a
+              href="mailto:aesmalyon@gmail.com"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              {" "}
+              aesmalyon@gmail.com
+            </a>
           </div>
         </div>
 

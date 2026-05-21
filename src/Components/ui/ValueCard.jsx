@@ -18,7 +18,7 @@ const ValueCard = ({ title, description, image, icon, colors }) => {
           <img src={icon} alt="" className="w-12 h-12 object-contain" />
         </div>
         <h3 className={`text-xl font-bold mt-3 ${colors.text}`}>{title}</h3>
-        <p className="text-sm text-gray-600 text-center mt-2">{description}</p>
+        <p className="text-sm md:text-base text-gray-600 text-center mt-2">{description}</p>
       </div>
     </div>
   );

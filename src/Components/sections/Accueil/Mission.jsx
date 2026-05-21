@@ -33,6 +33,7 @@ const Mission = () => {
     { name: "Africa50", logo: null },
     { name: "CMRA", logo: null },
     { name: "Science Po", logo: null },
+    { name: "FADEM", logo: null},
   ];
 
   const getInitials = (name) =>
