@@ -9,12 +9,12 @@ const ContactHero = () => {
         bg-cover bg-center bg-no-repeat
         flex items-center
         min-h-75 sm:min-h-85 md:min-h-100
-        px-6 py-10 sm:px-10 sm:py-14 md:px-16 md:py-16 my-4
+        px-6 py-10 sm:px-10 sm:py-14 md:px-16 md:py-16 
       "
     >
       <div className="w-full max-w-[50%] flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
         <div className="flex flex-col gap-1">
-          <h1 className="text-green-700 text-xl sm:text-3xl md:text-4xl font-bold leading-tight">
+          <h1 className="text-green-900 text-xl sm:text-3xl md:text-4xl font-bold leading-tight">
             Contactez-nous
           </h1>
           <div className="flex w-24 h-0.75">
