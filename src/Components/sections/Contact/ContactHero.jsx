@@ -25,7 +25,7 @@ const ContactHero = () => {
         </div>
         <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
           Une question, une suggestion ou l'envie d'en savoir d'avantage sur
-          l'AESMALY ? <br /> Vous souhaitez collaborer avec nous ? <br /> Nous
+          l'AESMALY ? <br /> Nous
           sommes à votre écoute et ravis d'échanger avec vous.
         </p>
       </div>
