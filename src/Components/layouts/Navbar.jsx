@@ -40,7 +40,7 @@ const Navbar = () => {
                   `text-sm md:text-base font-semibold text-gray-700 hover:text-green-800 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0  after:h-0.5 after:bg-green-800 after:transition-all after:duration-300 hover:after:w-full ${isActive && "text-green-800 transition duration-500"}`
                 }
               >
-                {({isActive}) => (
+                {({ isActive }) => (
                   <>
                     {link.label}
                     {isActive && (
@@ -54,11 +54,12 @@ const Navbar = () => {
                 )}
               </NavLink>
             ))}
-            <Link
-             to={"/adhesion"}
-             className="px-6 py-2 text-white bg-green-800 rounded-full font-medium hover:bg-green-900 transition-colors cursor-pointer">
+            <a
+              href="https://www.helloasso.com/associations/aesmaly/adhesions/adhesion-2025" target="_blank"
+              className="px-6 py-2 text-white bg-green-800 rounded-full font-medium hover:bg-green-900 transition-colors cursor-pointer"
+            >
               Adhérer
-            </Link>
+            </a>
           </div>
 
           <button
@@ -92,7 +93,7 @@ const Navbar = () => {
                     `text-sm md:text-base font-semibold text-gray-700 hover:text-green-800 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0  after:h-0.5 after:bg-green-800 after:transition-all after:duration-300 hover:after:w-full ${isActive && "text-green-800 transition duration-500"}`
                   }
                 >
-                  {({isActive}) => (
+                  {({ isActive }) => (
                     <>
                       {link.label}
                       {isActive && (
@@ -107,9 +108,12 @@ const Navbar = () => {
                 </NavLink>
               ))}
 
-              <button className="px-10 py-3 text-white bg-green-800 rounded-full font-medium hover:bg-green-900 transition-colors">
+              <a
+                href="https://www.helloasso.com/associations/aesmaly/adhesions/adhesion-2025" target="_blank" rel="noopener noreferrer"
+                className="px-10 py-3 text-white bg-green-800 rounded-full font-medium hover:bg-green-900 transition-colors"
+              >
                 Adhérer
-              </button>
+              </a>
             </div>
           )}
         </div>

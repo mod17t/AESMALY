@@ -212,14 +212,14 @@ const ContactContent = () => {
             </p>
             <div className="flex justify-center gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/share/14TxZRGqpNU/?mibextid=wwXIfr"
                 aria-label="Facebook"
                 className="w-11 h-11 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:scale-110 transition-transform"
               >
                 <img src="/facebook.png" alt="facebook" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/aesmaly?igsh=MWYzbWFtaWszaW12NQ%3D%3D&utm_source=qr"
                 aria-label="Instagram"
                 className="w-11 h-11 rounded-full  flex items-center justify-center text-white hover:scale-110 transition-transform"
               >
@@ -227,7 +227,7 @@ const ContactContent = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/company/aesmaly/"
                 aria-label="LinkedIn"
                 className="w-11 h-11 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
               >
@@ -252,7 +252,7 @@ const ContactContent = () => {
             tournée vers{" "}
             <span className="font-bold text-green-700">l'avenir</span>.
           </p>
-          
+
           <img
             src="/Contact/handshake.png"
             alt=""
