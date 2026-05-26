@@ -11,7 +11,6 @@ import emailjs from "@emailjs/browser";
 
 const ContactContent = () => {
   const handleSubmit = (e) => {
-    e.preventDefault();
     emailjs
       .sendForm(
         "service_xe0mmbx",
