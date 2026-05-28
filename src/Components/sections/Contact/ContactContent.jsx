@@ -1,11 +1,13 @@
 import { Send, Mail, Phone, MapPin, Clock, Quote, Lock } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Modal from "../../ui/Modal.jsx";
 import ErrorModal from "../../ui/ErrorModal.jsx";
 
 const ContactContent = () => {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
 
@@ -16,7 +18,7 @@ const ContactContent = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data,e) => {
+  const onSubmit = (data, e) => {
     e.preventDefault();
     emailjs
       .sendForm(
@@ -290,11 +292,23 @@ const ContactContent = () => {
           />
         </div>
       </div>
-      {isModalOpen && <Modal closeModal={() => setIsModalOpen(false)} />}
+      {isModalOpen && (
+        <Modal
+          closeModal={() => {
+            setIsModalOpen(false);
+            navigate("/");
+          }}
+        />
+      )}
 
       {isErrorModalOpen && (
-        <ErrorModal closeModal={() => setIsErrorModalOpen(false)} />)}
-
+        <ErrorModal
+          closeModal={() => {
+            setIsErrorModalOpen(false);
+            navigate("/");
+          }}
+        />
+      )}
     </section>
   );
 };
