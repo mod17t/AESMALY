@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { X } from "lucide-react";
 
 const titleColorMap = {
   green: "text-[#1B6B35]",
@@ -20,47 +22,70 @@ const ActivityCard = ({
   description,
   titleColor = "green",
 }) => {
-  return (
-    <div className="w-full bg-white rounded-2xl shadow-gray-300 shadow-sm px-3 pt-4 pb-5 sm:px-5 md:px-6 md:pt-5">
-      
-      <h2
-        className={`text-base sm:text-lg font-semibold mb-3 ${titleColorMap[titleColor]}`}
-      >
-        {title}
-      </h2>
+  const [selectedImage, setSelectedImage] = useState(null);
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-1">
-        {images.map((src, i) => (
+  return (
+    <>
+      <div className="w-full bg-white rounded-2xl shadow-sm shadow-stone-200 border border-stone-100 px-4 pt-5 pb-5 sm:px-6 md:px-8 md:pt-6">
+        <h2
+          className={`text-base sm:text-lg font-semibold mb-4 ${titleColorMap[titleColor]}`}
+        >
+          {title}
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          {images.map((src, i) => (
+            <div
+              key={i}
+              className="aspect-4/3 rounded-xl overflow-hidden bg-stone-100 cursor-pointer"
+              onClick={() => setSelectedImage(src)}
+            >
+              <img
+                src={src}
+                alt={`${title} image ${i + 1}`}
+                className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="flex items-start gap-3 mt-5 pt-4 border-t border-stone-100">
           <div
-            key={i}
-            className="aspect-video rounded-xl overflow-hidden bg-stone-100"
+            className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${iconBgMap[titleColor]}`}
           >
             <img
-              src={src}
-              alt={`${title} image ${i + 1}`}
-              className="w-full h-full object-cover object-center"
+              src={icon}
+              alt=""
+              className="w-5 h-5 object-contain"
+              aria-hidden="true"
             />
           </div>
-        ))}
+          <p className="text-xs sm:text-sm leading-relaxed text-stone-600">
+            {description}
+          </p>
+        </div>
       </div>
 
-      {/* Icône + description */}
-      <div className="flex items-start gap-3 mt-4">
+      {selectedImage && (
         <div
-          className={`shrink-0 w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center ${iconBgMap[titleColor]}`}
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm"
+          onClick={() => setSelectedImage(null)}
         >
+          <button
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            <X className="w-5 h-5 text-white" />
+          </button>
           <img
-            src={icon}
+            src={selectedImage}
             alt=""
-            className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
-            aria-hidden="true"
+            className="max-w-full max-h-[90vh] rounded-xl object-contain"
+            onClick={(e) => e.stopPropagation()}
           />
         </div>
-        <p className="text-xs sm:text-sm leading-relaxed text-stone-700 font-">
-          {description}
-        </p>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

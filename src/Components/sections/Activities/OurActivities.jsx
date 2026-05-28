@@ -31,9 +31,9 @@ const OurActivities = () => {
       title: "Journée Professionnelle",
       titleColor: "red",
       images: [
-        "/Activities/SP-1.jpeg",
-        "/Activities/SP-2.jpeg",
-        "/Activities/SP-3.jpg",
+        "/Activities/JP-1.jpeg",
+        "/Activities/JP-2.jpg",
+        "/Activities/JP-3.jpg",
       ],
       icon: "/Activities/pro-icon.png",
       description:
@@ -43,9 +43,9 @@ const OurActivities = () => {
       title: "La Journée Culturelle",
       titleColor: "green",
       images: [
-        "/Activities/SP-1.jpeg",
-        "/Activities/SP-2.jpeg",
-        "/Activities/SP-3.jpg",
+        "/Activities/JC-1.jpeg",
+        "/Activities/JC-2.jpg",
+        "/Activities/JC-3.jpg",
       ],
       icon: "/Activities/JC-icon.png",
       description:
@@ -57,13 +57,25 @@ const OurActivities = () => {
       title: "La FAN CAN Zone",
       titleColor: "green",
       images: [
-        "/Activities/SP-1.jpeg",
-        "/Activities/SP-2.jpeg",
-        "/Activities/SP-3.jpg",
+        "/Activities/fan-1.jpeg",
+        "/Activities/fan-2.jpeg",
+        "/Activities/fan-3.jpg",
       ],
       icon: "/Activities/JC-icon.png",
       description:
         "La Fan Can Zone est un événement autour des grandes compétitions de football africain, notamment la Coupe d’Afrique des Nations (CAN). Elle offre un espace de rassemblement pour les passionnés de football, permettant de suivre les matchs dans une ambiance festive et conviviale. Cet événement favorise le partage de la passion pour le football et renforce les liens entre les membres de l’association.",
+    },
+    {
+      title: "Diasportraits_Science Po",
+      titleColor: "amber",
+      images: [
+        "/Activities/DP-1.jpg",
+        "/Activities/DP-2.jpg",
+        "/Activities/DP-3.jpg",
+      ],
+      icon: "/Activities/JC-icon.png",
+      description:
+        "Diasportraits est un événement qui met en avant les histoires et les identités de la diaspora à travers l’art, les échanges, la culture et le témoignage. C’est un moment où chacun peut partager un bout de son parcours, découvrir d’autres vécus et créer du lien avec différentes communautés. L’ambiance est conviviale, créative et ouverte. L’objectif est de valoriser nos voix, nos cultures et nos expériences.",
     },
   ];
   return (
