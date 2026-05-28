@@ -1,16 +1,23 @@
-import {
-  Send,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Quote,
-  Lock,
-} from "lucide-react";
+import { Send, Mail, Phone, MapPin, Clock, Quote, Lock } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import Modal from "../../ui/Modal.jsx";
+import ErrorModal from "../../ui/ErrorModal.jsx";
 
 const ContactContent = () => {
-  const handleSubmit = (e) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data,e) => {
+    e.preventDefault();
     emailjs
       .sendForm(
         "service_xe0mmbx",
@@ -19,10 +26,13 @@ const ContactContent = () => {
         "A9LaqPE2GQbRW5nE6",
       )
       .then(
-        () => alert("Message envoyé avec succès !"),
-        (error) => alert("Erreur lors de l'envoi du message : ", error),
+        () => {
+          e.target.reset();
+          setIsModalOpen(true);
+        },
+        (error) => setIsErrorModalOpen(true),
       );
-  }
+  };
   return (
     <section className="bg-[#FEF9F5] py-12 md:py-16 lg:py-20 px-[5%] md:px-[10%]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -38,7 +48,10 @@ const ContactContent = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col gap-5"
+          >
             <div className="flex flex-col gap-1.5">
               <label
                 htmlFor="name"
@@ -48,11 +61,14 @@ const ContactContent = () => {
               </label>
               <input
                 id="name"
-                name="name"
                 type="text"
                 placeholder="Votre nom"
+                {...register("name", { required: "Le nom est requis" })}
                 className="border-2 border-gray-200 rounded-md p-3 focus:outline-none focus:border-green-700 transition-colors"
               />
+              {errors.name && (
+                <p className="text-red-500 text-xs">{errors.name.message}</p>
+              )}
             </div>
 
             <div className="flex flex-col gap-1.5">
@@ -64,11 +80,20 @@ const ContactContent = () => {
               </label>
               <input
                 id="email"
-                name="email"
                 type="email"
                 placeholder="Votre adresse e-mail"
+                {...register("email", {
+                  required: "L'adresse e-mail est requise",
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "Adresse e-mail invalide",
+                  },
+                })}
                 className="border-2 border-gray-200 rounded-md p-3 focus:outline-none focus:border-green-700 transition-colors"
               />
+              {errors.email && (
+                <p className="text-red-500 text-xs">{errors.email.message}</p>
+              )}
             </div>
 
             <div className="flex flex-col gap-1.5">
@@ -80,11 +105,14 @@ const ContactContent = () => {
               </label>
               <input
                 id="subject"
-                name="subject"
                 type="text"
                 placeholder="Sujet de votre message"
+                {...register("subject", { required: "Le sujet est requis" })}
                 className="border-2 border-gray-200 rounded-md p-3 focus:outline-none focus:border-green-700 transition-colors"
               />
+              {errors.subject && (
+                <p className="text-red-500 text-xs">{errors.subject.message}</p>
+              )}
             </div>
 
             <div className="flex flex-col gap-1.5">
@@ -96,11 +124,14 @@ const ContactContent = () => {
               </label>
               <textarea
                 id="message"
-                name="message"
                 rows="5"
                 placeholder="Votre message..."
+                {...register("message", { required: "Le message est requis" })}
                 className="border-2 border-gray-200 rounded-md p-3 focus:outline-none focus:border-green-700 transition-colors resize-y"
               />
+              {errors.message && (
+                <p className="text-red-500 text-xs">{errors.message.message}</p>
+              )}
             </div>
 
             <button
@@ -259,6 +290,11 @@ const ContactContent = () => {
           />
         </div>
       </div>
+      {isModalOpen && <Modal closeModal={() => setIsModalOpen(false)} />}
+
+      {isErrorModalOpen && (
+        <ErrorModal closeModal={() => setIsErrorModalOpen(false)} />)}
+
     </section>
   );
 };
