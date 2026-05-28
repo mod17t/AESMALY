@@ -1,8 +1,9 @@
-import { Send, Mail, Phone, MapPin, Clock, Quote, Lock } from "lucide-react";
-import { useState } from "react";
+import { Send, Mail, Phone, MapPin, Clock, Lock } from "lucide-react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 import Modal from "../../ui/Modal.jsx";
 import ErrorModal from "../../ui/ErrorModal.jsx";
 
@@ -10,6 +11,7 @@ const ContactContent = () => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
+  const recaptchaRef = useRef(null);
 
   const {
     register,
@@ -20,6 +22,13 @@ const ContactContent = () => {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
+
+    const captchaToken = recaptchaRef.current.getValue();
+    if (!captchaToken) {
+      alert("Veuillez valider le captcha.");
+      return;
+    }
+
     emailjs
       .sendForm(
         "service_xe0mmbx",
@@ -29,12 +38,14 @@ const ContactContent = () => {
       )
       .then(
         () => {
-          e.target.reset();
+          reset();
+          recaptchaRef.current.reset();
           setIsModalOpen(true);
         },
-        (error) => setIsErrorModalOpen(true),
+        () => setIsErrorModalOpen(true),
       );
   };
+
   return (
     <section className="bg-[#FEF9F5] py-12 md:py-16 lg:py-20 px-[5%] md:px-[10%]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -136,6 +147,11 @@ const ContactContent = () => {
               )}
             </div>
 
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey="6LfhRQEtAAAAAJAi9G9cY9alonr0gKnlBskfROp0"
+            />
+
             <button
               type="submit"
               className="flex items-center justify-center gap-2 bg-green-900 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-md cursor-pointer transition-colors"
@@ -180,10 +196,7 @@ const ContactContent = () => {
                   </a>
                 </div>
               </li>
-
               <div className="border-t border-gray-100"></div>
-
-              {/* Téléphone */}
               <li className="flex items-start gap-3">
                 <div className="shrink-0 w-11 h-11 rounded-full bg-yellow-400 flex items-center justify-center">
                   <Phone className="w-5 h-5 text-white" />
@@ -198,10 +211,7 @@ const ContactContent = () => {
                   </a>
                 </div>
               </li>
-
               <div className="border-t border-gray-100"></div>
-
-              {/* Adresse */}
               <li className="flex items-start gap-3">
                 <div className="shrink-0 w-11 h-11 rounded-full bg-red-500 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-white" />
@@ -215,9 +225,7 @@ const ContactContent = () => {
                   </p>
                 </div>
               </li>
-
               <div className="border-t border-gray-100"></div>
-
               <li className="flex items-start gap-3">
                 <div className="shrink-0 w-11 h-11 rounded-full bg-green-900 flex items-center justify-center">
                   <Clock className="w-5 h-5 text-white" />
@@ -253,11 +261,10 @@ const ContactContent = () => {
               <a
                 href="https://www.instagram.com/aesmaly?igsh=MWYzbWFtaWszaW12NQ%3D%3D&utm_source=qr"
                 aria-label="Instagram"
-                className="w-11 h-11 rounded-full  flex items-center justify-center text-white hover:scale-110 transition-transform"
+                className="w-11 h-11 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
               >
                 <img src="/instagram.png" alt="instagram" />
               </a>
-
               <a
                 href="https://www.linkedin.com/company/aesmaly/"
                 aria-label="LinkedIn"
@@ -270,10 +277,6 @@ const ContactContent = () => {
         </div>
 
         <div className="lg:col-span-3 bg-white rounded-2xl p-6 md:p-8 shadow-sm flex items-center gap-4 md:gap-6">
-          {/* <Quote
-            className="shrink-0 w-8 h-8 md:w-10 md:h-10 text-gray-300"
-            fill="currentColor"
-          />*/}
           <span className="text-7xl md:text-8xl text-green-800 font-serif font-bold leading-none select-none">
             &ldquo;
           </span>
@@ -284,7 +287,6 @@ const ContactContent = () => {
             tournée vers{" "}
             <span className="font-bold text-green-700">l'avenir</span>.
           </p>
-
           <img
             src="/Contact/handshake.png"
             alt=""
@@ -292,6 +294,7 @@ const ContactContent = () => {
           />
         </div>
       </div>
+
       {isModalOpen && (
         <Modal
           closeModal={() => {
@@ -300,12 +303,10 @@ const ContactContent = () => {
           }}
         />
       )}
-
       {isErrorModalOpen && (
         <ErrorModal
           closeModal={() => {
             setIsErrorModalOpen(false);
-            navigate("/");
           }}
         />
       )}
