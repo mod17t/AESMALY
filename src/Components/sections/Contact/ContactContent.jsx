@@ -9,6 +9,7 @@ import ErrorModal from "../../ui/ErrorModal.jsx";
 
 const ContactContent = () => {
   const navigate = useNavigate();
+  const [captchaError, setCaptchaError] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
   const recaptchaRef = useRef(null);
@@ -25,9 +26,11 @@ const ContactContent = () => {
 
     const captchaToken = recaptchaRef.current.getValue();
     if (!captchaToken) {
-      alert("Veuillez valider le captcha.");
+      setCaptchaError(true);
       return;
     }
+    setCaptchaError(false);
+
 
     emailjs
       .sendForm(
@@ -151,6 +154,11 @@ const ContactContent = () => {
               ref={recaptchaRef}
               sitekey="6LfhRQEtAAAAAJAi9G9cY9alonr0gKnlBskfROp0"
             />
+            {captchaError && (
+              <p className="text-red-500 text-xs">
+                Veuillez valider le captcha.
+              </p>
+            )}
 
             <button
               type="submit"
