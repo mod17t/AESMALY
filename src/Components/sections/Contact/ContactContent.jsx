@@ -31,7 +31,6 @@ const ContactContent = () => {
     }
     setCaptchaError(false);
 
-
     emailjs
       .sendForm(
         "service_xe0mmbx",
@@ -109,6 +108,32 @@ const ContactContent = () => {
               />
               {errors.email && (
                 <p className="text-red-500 text-xs">{errors.email.message}</p>
+              )}
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <label
+                htmlFor="tel"
+                className="text-green-900 font-semibold text-sm"
+              >
+                Téléphone{" "}
+                <span className="text-gray-400 font-normal">(optionnel)</span>
+              </label>
+              <input
+                id="tel"
+                type="tel"
+                placeholder="Votre numéro de téléphone au format +33 ...."
+                {...register("tel", {
+                  pattern: {
+                    value: /^(\+33|0)[1-9](\d{2}){4}$/,
+                    message:
+                      "Veuillez entrer un numéro français valide (ex: 0612345678).",
+                  },
+                })}
+                className="border-2 border-gray-200 rounded-md p-3 focus:outline-none focus:border-green-700 transition-colors"
+              />
+              {errors.tel && (
+                <p className="text-red-500 text-xs">{errors.tel.message}</p>
               )}
             </div>
 
