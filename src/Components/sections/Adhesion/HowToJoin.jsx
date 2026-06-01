@@ -19,9 +19,9 @@ const HowToJoin = () => {
             <div className="flex flex-row items-center gap-5 sm:gap-6">
               <a
                 href="https://www.helloasso.com/associations/aesmaly/adhesions/adhesion-2025"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-green-800 hover:bg-green-900 text-white px-4 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y- w-fit"
+                className="inline-flex items-center justify-center gap-3 bg-green-800 hover:bg-green-900 text-white px-4 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 hover:underline underline-offset-2 decoration-white/50 w-fit"
               >
                 Adhérer maintenant
                 <MousePointerClick className="w-5 h-5" />

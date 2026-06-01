@@ -135,7 +135,7 @@ const Mission = () => {
                 key={partner.name}
                 className="group flex flex-col items-center justify-center text-center bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:border-green-700 hover:-translate-y-1 transition-all duration-300"
               >
-                <p className="text-sm md:text-base font-semibold text-gray-800 leading-tight">
+                <p className="text-sm md:text-base font-semibold leading-tight text-flag-sweep">
                   {partner.name}
                 </p>
               </div>

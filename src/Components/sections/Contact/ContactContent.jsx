@@ -206,21 +206,6 @@ const ContactContent = () => {
               </li>
               <div className="border-t border-gray-100"></div>
               <li className="flex items-start gap-3">
-                <div className="shrink-0 w-11 h-11 rounded-full bg-yellow-400 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex flex-col">
-                  <p className="font-semibold text-gray-900">Téléphone</p>
-                  <a
-                    href="tel:+33600000000"
-                    className="text-gray-600 text-sm hover:text-green-900 transition-colors"
-                  >
-                    +33 6 00 00 00 00
-                  </a>
-                </div>
-              </li>
-              <div className="border-t border-gray-100"></div>
-              <li className="flex items-start gap-3">
                 <div className="shrink-0 w-11 h-11 rounded-full bg-red-500 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>

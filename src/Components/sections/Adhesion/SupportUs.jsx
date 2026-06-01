@@ -6,9 +6,11 @@ const SupportUs = () => {
       <section className="py-6 md:py-8 px-5 md:px-7 bg-red-50/40">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-3">
-            <div className="flex items-center gap-3 bg-red-700 text-white px-5 py-2 rounded-tl-full rounded-r-full">
-              <HeartHandshake className="w-6 h-6" />
-              <h2 className="font-bold text-sm sm:text-base">
+            <div className="w-9 h-9 rounded-full bg-red-100 flex items-center justify-center shrink-0">
+              <HeartHandshake className="w-5 h-5 text-red-700" />
+            </div>
+            <div>
+              <h2 className="font-medium text-lg text-red-800 border-b-2 border-red-200 pb-0.5 leading-tight">
                 Soutenir l'AESMALY
               </h2>
             </div>
@@ -43,7 +45,6 @@ const SupportUs = () => {
           </div>
         </div>
       </section>
-      
     </>
   );
 };
