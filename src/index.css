@@ -20,8 +20,8 @@
 }
 
 @keyframes flag-sweep {
-  0%   { background-position: 0% center; }
-  100% { background-position: 250% center; }
+  0%   { background-position: 250% center; }
+  100% { background-position: 0% center; }
 }
 
 .text-flag-sweep {
@@ -43,5 +43,5 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  animation: flag-sweep 5s ease-in-out infinite;
+  animation: flag-sweep 4.5s ease-in-out infinite;
 }
