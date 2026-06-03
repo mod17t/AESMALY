@@ -1,5 +1,5 @@
 # =============================
-# 1️⃣ Build du site React (Vite)
+# Build du site React 
 # =============================
 FROM node:22-alpine AS builder
 
@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 # =============================
-# 2️⃣ Service avec NGINX
+# Service avec NGINX
 # =============================
 FROM nginx:alpine
 
