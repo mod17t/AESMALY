@@ -177,7 +177,7 @@ const ContactContent = () => {
 
             <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey="6LfhRQEtAAAAAJAi9G9cY9alonr0gKnlBskfROp0"
+              sitekey="6LfMnxEtAAAAAOtn4eXhX7E816ELyZfGlLj8u_HQ"
             />
             {captchaError && (
               <p className="text-red-500 text-xs">
